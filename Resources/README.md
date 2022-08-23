@@ -6,6 +6,6 @@
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/01_PostGIS-Cookbook">01_PostGIS-Cookbook</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/01_PostGIS-Cookbook"> PostGIS Cookbook </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/01_PostGIS-Cookbook"> Second Edition</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/01_PostGIS-Cookbook">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/01_PostGIS-Cookbook">None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/02-Readmees">02-Readmees</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/02-Readmees"> README </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/02-Readmees"> How You Should Format Them</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/02-Readmees"> None</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/02-Readmees">None</a>*** |  |
 
-<sup>Last Updated: 2022-08-23 (Tue @ 14:40)</sup> 
+<sup>Last Updated: 2022-08-23 (Tue @ 15:22)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
