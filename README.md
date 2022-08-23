@@ -2,7 +2,7 @@
 
 ### Roster
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1f8bAaOnt9maLomWO3WWXTwb7yqCbTVavk1FJo-BNYL4/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1MWY55jB2sx6sIHdr9vrSaZd0pOX0p5qO_jVj4aEhBbs/edit?usp=sharing)
 
 
 ### ZOOM Link              
