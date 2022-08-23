@@ -47,7 +47,7 @@ I use Github as a home-base for all assignments, lectures, and resources. It's b
 - When you create a Github account, you must choose a `username`.
 - This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
 - Create a repository named:
-    - `4553-Spatial-DB-yourlastname` 
+    - `5443-Spatial-DB-yourlastname` 
     - replace the `yourlastname` with your last name to make it unique.
 - Check the box that says: "Add a README.md file"
 
@@ -69,7 +69,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.Github.c
 
 ```md
 ## Albert Einstein
-#### Repo: 4553 Spatial DB Repo
+#### Repo: 5443 Spatial DB Repo
 #### Email: albert.einstein@yahoo.com
 #### Website: https://en.wikipedia.org/wiki/Albert_Einstein
 #### Image:
@@ -81,7 +81,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.Github.c
 
 -----
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/repo_readme_example_4553.png" width="600">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/repo_readme_example_5443.png" width="600">
 
 -----
 
