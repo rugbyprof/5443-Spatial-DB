@@ -81,7 +81,7 @@ If you're not familiar with `markdown` you can go [here](https://guides.Github.c
 
 -----
 
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/repo_readme_example_5443.png" width="600">
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/repo_readme_example_5443v2.png" width="600">
 
 -----
 
