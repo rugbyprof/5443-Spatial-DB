@@ -60,20 +60,17 @@ class DatabaseCursor(object):
         self.conn.close()
 
 
-# create_extension = """CREATE EXTENSION postgis;"""
-
-create_extension = """DROP EXTENSION postgis CASCADE; 
-SET search_path to public; 
-CREATE EXTENSION postgis;"""
-
-
 create_extension = """CREATE EXTENSION postgis;"""
+
+# create_extension = """DROP EXTENSION postgis CASCADE;
+# SET search_path to ch01;
+# CREATE EXTENSION postgis;"""
 
 
 alter_db = """ALTER DATABASE cookbook SET search_path=chp02,public;
 """
 
-drop_table = "DROP TABLE  IF EXISTS airports;"
+drop_table = "DROP TABLE  IF EXISTS ch01.airports;"
 
 
 create_table = """CREATE TABLE airports (
@@ -81,7 +78,7 @@ create_table = """CREATE TABLE airports (
     name VARCHAR(64) NOT NULL,
 
     city VARCHAR(32) NOT NULL,
-    country VARCHAR(64) NOT NULL,
+    country VARCHAR(256) NOT NULL,
     three_code VARCHAR(3) NOT NULL,
     four_code VARCHAR(4) NOT NULL,
     lat DECIMAL(11,8) NOT NULL,
@@ -90,7 +87,6 @@ create_table = """CREATE TABLE airports (
     gmt VARCHAR(10),
     tz_short VARCHAR(2),
     time_zone VARCHAR(32),
-
     type VARCHAR(32),
     location GEOMETRY(POINT, 4326));"""
 
@@ -118,10 +114,11 @@ ORDER BY dist LIMIT 10;
 
 if __name__ == "__main__":
     with DatabaseCursor(".config.json") as cur:
-        cur.execute(create_extension)
+        # cur.execute(create_extension)
         cur.execute(drop_table)
         cur.execute(create_table)
 
+    with DatabaseCursor(".config.json") as cur:
         with open("airports2.csv", newline="") as csvfile:
             data = csv.reader(csvfile, delimiter=",")
             for row in data:
@@ -138,13 +135,13 @@ if __name__ == "__main__":
                         col = "'" + col + "'"
                     newRow.append(col)
                 row = ", ".join(newRow)
-                sql = f"INSERT INTO public.airports VALUES ({row});"
+                sql = f"INSERT INTO ch01.airports VALUES ({row});"
                 # print(sql)
 
                 cur.execute(sql)
 
-        sql = "select * from airports;"
+        # sql = "select * from airports;"
 
-        cur.execute(sql)
+        # cur.execute(sql)
 
-        print(cur.fetchall())
+        # print(cur.fetchall())
