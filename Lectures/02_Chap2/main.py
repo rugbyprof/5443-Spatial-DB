@@ -55,24 +55,31 @@ class DatabaseCursor(object):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         # some logic to commit/rollback
+
         self.conn.commit()
         self.conn.close()
 
 
-#create_extension = """CREATE EXTENSION postgis;"""
+# create_extension = """CREATE EXTENSION postgis;"""
 
 create_extension = """DROP EXTENSION postgis CASCADE; 
 SET search_path to public; 
 CREATE EXTENSION postgis;"""
+
+
+create_extension = """CREATE EXTENSION postgis;"""
+
 
 alter_db = """ALTER DATABASE cookbook SET search_path=chp02,public;
 """
 
 drop_table = "DROP TABLE  IF EXISTS airports;"
 
-create_table = """CREATE TABLE public.airports (
+
+create_table = """CREATE TABLE airports (
     id NUMERIC PRIMARY KEY,
-    name VARCHAR(127) NOT NULL,
+    name VARCHAR(64) NOT NULL,
+
     city VARCHAR(32) NOT NULL,
     country VARCHAR(64) NOT NULL,
     three_code VARCHAR(3) NOT NULL,
@@ -83,9 +90,9 @@ create_table = """CREATE TABLE public.airports (
     gmt VARCHAR(10),
     tz_short VARCHAR(2),
     time_zone VARCHAR(32),
+
     type VARCHAR(32),
     location GEOMETRY(POINT, 4326));"""
-
 
 load_table = """COPY airports (
         id,name,city,country,three_code,four_code,
@@ -94,8 +101,6 @@ load_table = """COPY airports (
     ) FROM 'airports.csv';
 """
 
-alter_table = """ALTER TABLE airports ADD COLUMN location GEOMETRY(POINT, 4326);
-"""
 
 update_location = """UPDATE airports
 SET location = ST_SetSRID(ST_MakePoint(lon,lat), 4326);"""
@@ -112,22 +117,7 @@ ORDER BY dist LIMIT 10;
 """
 
 if __name__ == "__main__":
-    # with open(".config.json") as f:
-    #     config = json.load(f)
-
-    # conn = psycopg2.connect(
-    #     database=config["database"],
-    #     host=config["host"],
-    #     user=config["user"],
-    #     password=config["password"],
-    #     options=f'-c search_path={config["schema"]}',
-    # )
-
-    # cursor = conn.cursor()
-
-    # cursor.execute(create_table)
-
-    with DatabaseCursor('.config.json') as cur:
+    with DatabaseCursor(".config.json") as cur:
         cur.execute(create_extension)
         cur.execute(drop_table)
         cur.execute(create_table)
@@ -149,7 +139,7 @@ if __name__ == "__main__":
                     newRow.append(col)
                 row = ", ".join(newRow)
                 sql = f"INSERT INTO public.airports VALUES ({row});"
-                #print(sql)
+                # print(sql)
 
                 cur.execute(sql)
 
