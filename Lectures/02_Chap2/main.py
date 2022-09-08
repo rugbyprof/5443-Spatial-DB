@@ -104,10 +104,9 @@ SET location = ST_SetSRID(ST_MakePoint(lon,lat), 4326);"""
 """
 -- select ST_AsEWKT(location,1) from airports
 -- WHERE id = 677;
+"""
 
-
-
-SELECT *, ST_Distance('SRID=4326;POINT(-118.41004 33.942791)'::geometry, location) AS dist
+closest = """SELECT *, ST_Distance('SRID=4326;POINT(-118.41004 33.942791)'::geometry, location) AS dist
 FROM airports
 ORDER BY dist LIMIT 10;
 """
@@ -142,6 +141,6 @@ if __name__ == "__main__":
 
         # sql = "select * from airports;"
 
-        # cur.execute(sql)
+        cur.execute(closest)
 
-        # print(cur.fetchall())
+        print(cur.fetchall())
