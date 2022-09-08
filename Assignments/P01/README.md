@@ -1,6 +1,8 @@
 ## Project 1 - Project setup  
-#### Due: 09-08-2022 (Thursday @ 3:30 p.m.)
+#### Due: 09-13-2022 (Tuesday @ 3:30 p.m.)
 
+
+# MORE TO BE ADDED
 
 ## Overview
 
