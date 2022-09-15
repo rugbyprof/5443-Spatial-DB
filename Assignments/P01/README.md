@@ -2,8 +2,6 @@
 #### Due: 09-13-2022 (Tuesday @ 3:30 p.m.)
 
 
-# MORE TO BE ADDED
-
 ## Overview
 
 No Groups for this one.
