@@ -20,6 +20,8 @@ Specifically we want the following data files. Most are shape files, one is a cs
   - https://www2.census.gov/geo/tiger/TIGER2021/MIL/tl_2021_us_mil.zip
 - Airports
   - https://cs.msutexas.edu/~griffin/data/Airport_and_Plane_Data/airports.csv
+- Time Zones
+  - https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_time_zones.zip
 
 ### Import and Create Tables
 
