@@ -42,5 +42,10 @@ select *,geom::json from ch01.airports;
 select *,geom::json from primary_roads where fullname like 'I- 10';
 ```
 
-## Due:
+## Deliverables:
+
+- Create a folder in your github `Assignments` folder called `P02A`
+- Export the sql to create your tables and indexes into 1 file per table.
+- Select the first 5-10 rows and output those in a manner that's readable, again, 1 per table.
+  
 
