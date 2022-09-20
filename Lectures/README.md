@@ -4,7 +4,8 @@
 |:------|:------|:------|:------|:-----:|-----|
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/01_Chap1">01_Chap1</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/01_Chap1">None</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/01_Chap1">None</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/01_Chap1">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/01_Chap1">None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/02_Chap2">02_Chap2</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/02_Chap2"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/02_Chap2"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/02_Chap2">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/02_Chap2">None</a>*** |  |
+| ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter">03_ApiStarter</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter">None</a>*** |  |
 
-<sup>Last Updated: 2022-09-15 (Thu @ 17:09)</sup> 
+<sup>Last Updated: 2022-09-20 (Tue @ 15:27)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
