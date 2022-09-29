@@ -81,4 +81,9 @@ ORDER BY fullname ASC
 
 ## Deliverables
 
-TBD
+- Create a folder in your github `Assignments` folder called `P03`
+- Export the sql to create your tables and indexes into **1 file per table**.
+- Select the first 5-10 rows and output those in a manner that's readable, again, **1 file per table**.
+- Place all of your files inside the `P03` folder. 
+  
+
