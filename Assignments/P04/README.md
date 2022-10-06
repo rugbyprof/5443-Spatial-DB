@@ -7,8 +7,6 @@
 
 ## Overview
 
-I think we may forgo the use of the military installations shape file. If you view the data, you will see most of the bases clustered around the perimeter of the use (aka coastlines). This is a great idea for conventional warfare, but will cause a confusion when visualizing our project. I propose that we use a subset of US cities as our bases. They will be more spread out, and will help with this project. 
-
 
 
 | decimals | degrees    | distance |
@@ -25,6 +23,7 @@ I think we may forgo the use of the military installations shape file. If you vi
 
 111 m/s = 248.3 mph
 
+### Distance in 3D
 ```sql
 SELECT ST_3DDistance(
 			ST_Transform('SRID=4326;POINT(-72.1235 42.3521 1)'::geometry,2163),
@@ -32,11 +31,16 @@ SELECT ST_3DDistance(
 		) As dist_3d
 ```
 
+### Project New Point
+- Given a Point, project a new location given a distance (555) and direction (45)
 ```sql
 SELECT ST_AsText(ST_Project('POINT(-98 34)'::geography, 555, radians(45.0)));
 ```
 
 
+### Create New Missile Path
+- Using the project point from above
+- Give a starting (p1) and ending point (p2) generate a missile path
 ```sql
 WITH 
 Q1 AS (
@@ -44,15 +48,16 @@ Q1 AS (
 ), 
 
 Q2 AS (
-     SELECT ST_Project('POINT(-98 34)'::geometry, 555, radians(45.0)) as p2
+     SELECT ST_Project('POINT(-98 34)'::geometry, 555, radians(45.0))::geometry as p2
 )
 
-SELECT p1,p2
+SELECT ST_MakeLine(ST_Point(ST_X(p1),ST_Y(p1)), ST_Point(ST_X(p2),ST_Y(p2))) as missilePath
 
 FROM Q1, Q2;
 ```
 
 
+### Make GeoJson
 ```sql
     WITH 
         Q1 AS (
@@ -65,4 +70,7 @@ SELECT jsonb_build_object(
 	'properties', null
     ) AS json
 FROM Q1
+```
+
+
 ```
