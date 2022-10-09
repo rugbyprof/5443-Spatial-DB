@@ -150,6 +150,58 @@ class DBQuery(object):
 
 conn = DBQuery(".config.json")
 
+
+def dropRate(speed,distance,altitude):
+    time = distance/speed
+    
+    return {"time":time,"rate":altitude / time}
+
+
+missile_dict = {
+    "Atlas"       :{"speed":1,"blast": 7},
+    "Harpoon"     :{"speed":2,"blast": 8},
+    "Hellfire"    :{"speed":3,"blast": 7},
+    "Javelin"     :{"speed":4,"blast": 7},
+    "Minuteman"   :{"speed":5,"blast": 9},
+    "Patriot"     :{"speed":6,"blast": 6},
+    "Peacekeeper" :{"speed":7,"blast": 6},
+    "SeaSparrow"  :{"speed":8,"blast": 5},
+    "Titan"       :{"speed":8,"blast": 5},
+    "Tomahawk"    :{"speed":9,"blast": 6},
+    "Trident"     :{"speed":9,"blast": 9}
+}
+
+speed_dict = {
+    1: {"ms":111,"mph":248.307},
+    2: {"ms":222,"mph":496.614},
+    3: {"ms":333,"mph":744.921},
+    4: {"ms":444,"mph":993.228},
+    5: {"ms":555,"mph":1241.535},
+    6: {"ms":666,"mph":1489.842},
+    7: {"ms":777,"mph":1738.149},
+    8: {"ms":888,"mph":1986.456},
+    9: {"ms":999,"mph":2234.763}
+}
+
+blast_dict = {
+    1: 200,
+    2: 300,
+    3: 400,
+    4: 500,
+    5: 600,
+    6: 700,
+    7: 800,
+    8: 900,
+    9: 1000
+}
+
+def missileStats(name):
+    data = missile_dict[name]
+    speed = speed_dict[data['speed']]
+    blast = blast_dict[data['blast']]
+    return {"speed":speed,"blast":blast}
+
+
 """
   _____   ____  _    _ _______ ______  _____
  |  __ \ / __ \| |  | |__   __|  ____|/ ____|
