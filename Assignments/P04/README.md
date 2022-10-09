@@ -5,9 +5,37 @@
 <img src="mc.gif" width="300">
 </center>
 
-## Overview
+## Routes
+
+### `getRegion`
+As stated in the previous assignment you will be defending a region against incoming missile attacks. The region you will defend will be assigned to you via an api call to `getRegion`. That call will return a geojson object with a list of features that will include:
+
+- Boundary : 1 or more polygons defining your region
+- Targets : Points defining the locations in which you are to defend 
+- Batteries : Points defining the location of your missile batteries
+
+**make example file**
+
+### `getMissiles`
+
+This route will send back a set of missiles that you have to defend your region. Don't worry about dividing up the missiles up amongst the batteries, we will assume any missile from your arsenal can be fired from any missile battery in your region. Below are a list of missiles and thier classifications. 
+
+| Name        | Speed | Blast |
+| :---------- | :---: | :---: |
+| Atlas       |   1   |   7   |
+| Harpoon     |   2   |   8   |
+| Hellfire    |   3   |   7   |
+| Javelin     |   4   |   7   |
+| Minuteman   |   5   |   9   |
+| Patriot     |   6   |   6   |
+| Peacekeeper |   7   |   6   |
+| SeaSparrow  |   8   |   5   |
+| Titan       |   8   |   5   |
+| Tomahawk    |   9   |   6   |
+| Trident     |   9   |   9   |
 
 
+**make example file**
 
 | decimals | degrees    | distance |
 | :------: | :--------- | -------: |

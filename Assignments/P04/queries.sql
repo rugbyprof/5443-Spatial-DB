@@ -38,3 +38,18 @@ JOIN military_bases AS bases
 ON ST_Intersects(states.geom, bases.geom)
 GROUP BY state_name,fullname
 order by state_name
+
+--Distance in meters
+SELECT ST_Distance(
+	ST_SetSRID(ST_Point(-112.214843 ,54.367758524),4326)::geography,
+    ST_SetSRID(ST_Point(-95.449218 ,29.68805274),4326)::geography) as d; 
+
+--Distance in feet
+SELECT ST_Distance(
+	ST_SetSRID(ST_Point(-112.214843 ,54.367758524),4326)::geography,
+    ST_SetSRID(ST_Point(-95.449218 ,29.68805274),4326)::geography)*3.28084 as d; 
+
+--Distance in miles
+SELECT ST_Distance(
+	ST_SetSRID(ST_Point(-112.214843 ,54.367758524),4326)::geography,
+    ST_SetSRID(ST_Point(-95.449218 ,29.68805274),4326)::geography)*3.28084/5280 as d; 
