@@ -255,6 +255,12 @@ def missilePath(d : str=None,buffer : float =0):
 
     return [start,end]
 
+@app.get("/getMissiles")
+def getMissiles(id : str=None):
+    names = list(missile_dict.keys())
+
+    return names
+
 @app.get("/missile_position")
 def calcPosition(lon :float, lat:float, speed:float, angle:float, time : int=1, geojson : bool=False):
     """
