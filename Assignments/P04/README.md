@@ -18,7 +18,7 @@ As stated in the previous assignment you will be defending a region against inco
 
 ### `getMissiles`
 
-This route will send back a set of missiles that you have to defend your region. Don't worry about dividing up the missiles up amongst the batteries, we will assume any missile from your arsenal can be fired from any missile battery in your region. Below are a list of missiles and thier classifications. 
+This route will send back a set of missiles that you have to defend your region. Don't worry about dividing up the missiles up amongst the batteries, we will assume any missile from your arsenal can be fired from any missile battery in your region. Below are a list of missiles and their classifications. 
 
 | Name        | Speed | Blast |
 | :---------- | :---: | :---: |
@@ -35,7 +35,21 @@ This route will send back a set of missiles that you have to defend your region.
 | Trident     |   9   |   9   |
 
 
-**make example file**
+```json
+{
+  "Atlas": 22,
+  "Harpoon": 24,
+  "Hellfire": 17,
+  "Javelin": 14,
+  "Minuteman": 19,
+  "Patriot": 27,
+  "Peacekeeper": 20,
+  "SeaSparrow": 20,
+  "Titan": 14,
+  "Tomahawk": 16,
+  "Trident": 11
+}
+```
 
 | decimals | degrees    | distance |
 | :------: | :--------- | -------: |
@@ -102,3 +116,8 @@ FROM Q1
 
 
 ```
+
+
+select * 
+from us_regions as r, us_states AS s
+where ST_Within(s.geom,r

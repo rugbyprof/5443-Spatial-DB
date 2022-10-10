@@ -5,7 +5,7 @@ import uvicorn
 import psycopg2
 import json
 import random
-
+from math import radians, degrees, cos, sin, asin, sqrt, pow, atan2
 
 """
            _____ _____   _____ _   _ ______ ____
@@ -25,7 +25,6 @@ Also the instance of `app` below description has info that gets displayed as wel
 # """
 
 
-
 # This is the `app` instance which passes in a series of keyword arguments
 # configuring this instance of the api. The URL's are obviously fake.
 app = FastAPI(
@@ -38,6 +37,43 @@ app = FastAPI(
     },
 )
 
+"""
+  ___   _ _____ _
+ |   \ /_\_   _/_\
+ | |) / _ \| |/ _ \
+ |___/_/ \_\_/_/ \_\
+"""
+
+# stores defenders playing missile command
+participants = {}
+
+missile_data = {
+    "missiles": {
+        "Atlas": {"speed": 1, "blast": 7},
+        "Harpoon": {"speed": 2, "blast": 8},
+        "Hellfire": {"speed": 3, "blast": 7},
+        "Javelin": {"speed": 4, "blast": 7},
+        "Minuteman": {"speed": 5, "blast": 9},
+        "Patriot": {"speed": 6, "blast": 6},
+        "Peacekeeper": {"speed": 7, "blast": 6},
+        "SeaSparrow": {"speed": 8, "blast": 5},
+        "Titan": {"speed": 8, "blast": 5},
+        "Tomahawk": {"speed": 9, "blast": 6},
+        "Trident": {"speed": 9, "blast": 9},
+    },
+    "speed": {
+        1: {"ms": 111, "mph": 248.307},
+        2: {"ms": 222, "mph": 496.614},
+        3: {"ms": 333, "mph": 744.921},
+        4: {"ms": 444, "mph": 993.228},
+        5: {"ms": 555, "mph": 1241.535},
+        6: {"ms": 666, "mph": 1489.842},
+        7: {"ms": 777, "mph": 1738.149},
+        8: {"ms": 888, "mph": 1986.456},
+        9: {"ms": 999, "mph": 2234.763},
+    },
+    "blast": {1: 200, 2: 300, 3: 400, 4: 500, 5: 600, 6: 700, 7: 800, 8: 900, 9: 1000},
+}
 
 
 """
@@ -49,6 +85,73 @@ app = FastAPI(
  |______\____/ \_____/_/    \_\______|  \_____|______/_/    \_\_____/_____/|______|_____/
 """
 
+def compass_bearing(PositionA, PositionB):
+    """Calculates the bearing between two points.
+        The formulae used is the following:
+            θ = atan2(sin(Δlong).cos(lat2),cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
+    Source:
+        https://gist.github.com/jeromer/2005586
+    Params:
+        pointA  : The tuple representing the latitude/longitude for the first point. Latitude and longitude must be in decimal degrees
+        pointB  : The tuple representing the latitude/longitude for the second point. Latitude and longitude must be in decimal degrees
+    Returns:
+        (float) : The bearing in degrees
+    """
+    
+    if not isinstance(PositionA,Position) or  not isinstance(PositionB,Position):
+        raise TypeError("Only tuples are supported as arguments")
+
+    lat1 = radians(PositionA.lat)
+    lat2 = radians(PositionB.lat)
+
+    diffLong = radians(PositionB.lon - PositionA.lon)
+
+    x = sin(diffLong) * cos(lat2)
+    y = cos(lat1) * sin(lat2) - (sin(lat1) * cos(lat2) * cos(diffLong))
+
+    initial_bearing = atan2(x, y)
+
+    # Now we have the initial bearing but math.atan2 return values
+    # from -180° to + 180° which is not what we want for a compass bearing
+    # The solution is to normalize the initial bearing as shown below
+    initial_bearing = degrees(initial_bearing)
+    compass_bearing = (initial_bearing + 360) % 360
+
+    return compass_bearing
+
+
+class Position(object):
+    def __init__(self,**kwargs):
+        self.lon = kwargs.get('lon',0.0)
+        self.lat = kwargs.get('lat',0.0)
+        self.altitude = kwargs.get('altitude',0.0)
+        self.time = kwargs.get('time',0.0)
+
+class MissileInfo(object):
+    @staticmethod
+    def missile(name):
+        if not name in list(missile_data["missiles"].keys()):
+            return {"error": "Missile doesn't exist."}
+        data = missile_data["missiles"][name]
+        speed = missile_data["speed"][data["speed"]]
+        blast = missile_data["blast"][data["blast"]]
+        return {"speed": speed, "blast": blast}
+
+    @staticmethod
+    def blast(id):
+        return missile_data["speeds"][id]
+
+    @staticmethod
+    def speed(id):
+        return missile_data["blasts"][id]
+
+
+class MissileServer(object):
+    def __init__(self):
+        pass
+
+    def registerDefender(self, id):
+        participants["defender"][id] = {}
 
 
 class DatabaseCursor(object):
@@ -151,55 +254,50 @@ class DBQuery(object):
 conn = DBQuery(".config.json")
 
 
-def dropRate(speed,distance,altitude):
-    time = distance/speed
-    
-    return {"time":time,"rate":altitude / time}
+def dropRate(speed, distance, altitude):
+    time = distance / speed
+    return {"time": time, "rate": altitude / time}
 
+def calc(pos1,pos2):
+    """
+    Params:
+        pos1 (Position) : lon,lat,altitude,time
+        pos2 (Position) : lon,lat,altitude,time
+    Returns:
+        speed,bearing,azimuth
+    """
+    pass
 
-missile_dict = {
-    "Atlas"       :{"speed":1,"blast": 7},
-    "Harpoon"     :{"speed":2,"blast": 8},
-    "Hellfire"    :{"speed":3,"blast": 7},
-    "Javelin"     :{"speed":4,"blast": 7},
-    "Minuteman"   :{"speed":5,"blast": 9},
-    "Patriot"     :{"speed":6,"blast": 6},
-    "Peacekeeper" :{"speed":7,"blast": 6},
-    "SeaSparrow"  :{"speed":8,"blast": 5},
-    "Titan"       :{"speed":8,"blast": 5},
-    "Tomahawk"    :{"speed":9,"blast": 6},
-    "Trident"     :{"speed":9,"blast": 9}
-}
+def nextLocation(
+    lon: float,
+    lat: float,
+    speed: float,
+    angle: float,
+    geojson: int
+):
+    """
+    lon (float) : x coordinate
+    lat (float) : y coordinate
+    speed (int) : meters per second
+    angle (float) : direction in degrees (0-360)
+    geojson(bool) : return the next position as a geojson object
+    """
+    if not geojson:
+        select = "st_x(p2) as x,st_y(p2) as y"
+    else:
+        select = "ST_AsGeoJSON(p2)"
 
-speed_dict = {
-    1: {"ms":111,"mph":248.307},
-    2: {"ms":222,"mph":496.614},
-    3: {"ms":333,"mph":744.921},
-    4: {"ms":444,"mph":993.228},
-    5: {"ms":555,"mph":1241.535},
-    6: {"ms":666,"mph":1489.842},
-    7: {"ms":777,"mph":1738.149},
-    8: {"ms":888,"mph":1986.456},
-    9: {"ms":999,"mph":2234.763}
-}
+    sql = f"""
+    WITH 
+        Q1 AS (
+            SELECT ST_SetSRID(ST_Project('POINT({lon} {lat})'::geometry, {speed*time}, radians({angle}))::geometry,4326) as p2
+        )
+ 
+    SELECT {select}
+    FROM Q1
+    """
 
-blast_dict = {
-    1: 200,
-    2: 300,
-    3: 400,
-    4: 500,
-    5: 600,
-    6: 700,
-    7: 800,
-    8: 900,
-    9: 1000
-}
-
-def missileStats(name):
-    data = missile_dict[name]
-    speed = speed_dict[data['speed']]
-    blast = blast_dict[data['blast']]
-    return {"speed":speed,"blast":blast}
+    return conn.queryOne(sql)
 
 
 """
@@ -221,71 +319,82 @@ async def docs_redirect():
     """Api's base route that displays the information created above in the ApiInfo section."""
     return RedirectResponse(url="/docs")
 
+
 @app.get("/missile_path")
-def missilePath(d : str=None,buffer : float =0):
+def missilePath(d: str = None, buffer: float = 0):
     bbox = {
-        'l': -124.7844079, # left
-        'r': -66.9513812, # right
-        't': 49.3457868, # top
-        'b': 24.7433195 # bottom
+        "l": -124.7844079,  # left
+        "r": -66.9513812,  # right
+        "t": 49.3457868,  # top
+        "b": 24.7433195,  # bottom
     }
 
-    directions = ['N','S','E','W']
+    directions = ["N", "S", "E", "W"]
 
     if not d:
         d = random.shuffle(directions)
 
-    x1 = ((abs(bbox['l']) - abs(bbox['r'])) * random.random() + abs(bbox['r'])) * -1
-    x2 = ((abs(bbox['l']) - abs(bbox['r'])) * random.random() + abs(bbox['r'])) * -1
-    y1 = (abs(bbox['t']) - abs(bbox['b'])) * random.random() + abs(bbox['b'])
-    y2 = (abs(bbox['t']) - abs(bbox['b'])) * random.random()+ abs(bbox['b'])
+    x1 = ((abs(bbox["l"]) - abs(bbox["r"])) * random.random() + abs(bbox["r"])) * -1
+    x2 = ((abs(bbox["l"]) - abs(bbox["r"])) * random.random() + abs(bbox["r"])) * -1
+    y1 = (abs(bbox["t"]) - abs(bbox["b"])) * random.random() + abs(bbox["b"])
+    y2 = (abs(bbox["t"]) - abs(bbox["b"])) * random.random() + abs(bbox["b"])
 
-    if d == 'N':
-        start = [x1,bbox['b'] - buffer]
-        end = [x2,bbox['t'] + buffer]
-    elif d == 'S':
-        start = [x1,bbox['t'] + buffer]
-        end = [x2,bbox['b'] - buffer]
-    elif d == 'E':
-        start = [bbox['l']- buffer,y1]
-        end = [bbox['r'] + buffer,y2]
+    if d == "N":
+        start = [x1, bbox["b"] - buffer]
+        end = [x2, bbox["t"] + buffer]
+    elif d == "S":
+        start = [x1, bbox["t"] + buffer]
+        end = [x2, bbox["b"] - buffer]
+    elif d == "E":
+        start = [bbox["l"] - buffer, y1]
+        end = [bbox["r"] + buffer, y2]
     else:
-        start = [bbox['r'] + buffer,y1]
-        end = [bbox['l'] - buffer,y2]
+        start = [bbox["r"] + buffer, y1]
+        end = [bbox["l"] - buffer, y2]
 
-    return [start,end]
+    return [start, end]
 
-@app.get("/getMissiles")
-def getMissiles(id : str=None):
-    names = list(missile_dict.keys())
 
-    return names
+@app.get("/getArsenal")
+def getMissiles(id: str = None, total: int = 50):
+    names = list(MissileInfo.keys())
 
-@app.get("/missile_position")
-def calcPosition(lon :float, lat:float, speed:float, angle:float, time : int=1, geojson : bool=False):
-    """
-        lon (float) : x coordinate
-        lat (float) : y coordinate 
-        speed (int) : meters per second
-        angle (float) : direction in degrees (0-360)
-        multiline(bool) : return the next position as point or interpolated line
-    """
-    if not geojson:
-        select = "st_x(p2) as x,st_y(p2) as y"
-    else:
-        select = "ST_AsGeoJSON(p2)"
+    missiles = []
 
-    sql = f"""
-    WITH 
-        Q1 AS (
-            SELECT ST_SetSRID(ST_Project('POINT({lon} {lat})'::geometry, {speed*time}, radians({angle}))::geometry,4326) as p2
-        )
- 
-    SELECT {select}
-    FROM Q1
-    """
+    ratio = len(names) / total
 
-    return conn.queryOne(sql)
+    print(ratio)
+
+    for name in names:
+        missiles.extend([name] * total)
+        total -= int(total * ratio)
+
+    random.shuffle(missiles)
+
+    missileCount = {}
+
+    for name in names:
+        missileCount[name] = missiles[:total].count(name)
+
+    if missileCount["Trident"] == 0:
+        missileCount["Trident"] = 1
+        missileCount["Atlas"] -= 1
+
+    return missileCount
+
+
+@app.get("/radar_sweep")
+def calcPosition():
+    x = 0
+    y = 0
+    z = 0
+    t = 0
+    return {"x": x, "y": y, "z": z, "t": t}
+
+
+@app.get("/missile")
+def getMissile(name: str):
+    return MissileInfo.missile(name)
 
 
 """
@@ -303,4 +412,9 @@ Note:
     The right side (app) is the bearingiable name of the FastApi instance declared at the top of the file.
 """
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="127.0.0.1", port=8080, log_level="debug", reload=True)
+    #uvicorn.run("api:app", host="127.0.0.1", port=8080, log_level="debug", reload=True)
+    print(MissileInfo.missile("Patriot"))
+    
+    A = Position(lon=-94,lat=35,altitude=13000,time=1)
+    B = Position(lon=-112,lat=35,altitude=13000,time=1)
+    print(compass_bearing(B,A))
