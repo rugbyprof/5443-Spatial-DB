@@ -16,7 +16,7 @@ As stated in the previous assignment you will be defending a region against inco
 
 **make example file**
 
-### `getMissiles`
+### `getArsenal`
 
 This route will send back a set of missiles that you have to defend your region. Don't worry about dividing up the missiles up amongst the batteries, we will assume any missile from your arsenal can be fired from any missile battery in your region. Below are a list of missiles and their classifications. 
 
@@ -34,20 +34,21 @@ This route will send back a set of missiles that you have to defend your region.
 | Tomahawk    |   9   |   6   |
 | Trident     |   9   |   9   |
 
-
+### Example Response
 ```json
 {
-  "Atlas": 22,
-  "Harpoon": 24,
-  "Hellfire": 17,
-  "Javelin": 14,
-  "Minuteman": 19,
-  "Patriot": 27,
-  "Peacekeeper": 20,
-  "SeaSparrow": 20,
-  "Titan": 14,
-  "Tomahawk": 16,
-  "Trident": 11
+  "Atlas": 20,
+  "Harpoon": 13,
+  "Hellfire": 12,
+  "Javelin": 11,
+  "Minuteman": 9,
+  "Patriot": 9,
+  "Peacekeeper": 8,
+  "SeaSparrow": 8,
+  "Titan": 5,
+  "Tomahawk": 4,
+  "Trident": 1,
+  "total": 100
 }
 ```
 
