@@ -4,7 +4,7 @@ from fastapi import FastAPI     # fast api
 from pydantic import BaseModel  # to create class models
 
 import uvicorn  # used as local mini server
-import psycopg2 # used to connect to postgres
+import psycopg2 # used to connect to postgres (not used here)
 
 class MissileSol(BaseModel):
     Lon1: float # starting X
