@@ -7,6 +7,6 @@
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter">03_ApiStarter</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/03_ApiStarter">None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/04_RandMissiles">04_RandMissiles</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/04_RandMissiles"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/04_RandMissiles"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/04_RandMissiles">N/A</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Lectures/04_RandMissiles">None</a>*** |  |
 
-<sup>Last Updated: 2022-10-04 (Tue @ 14:32)</sup> 
+<sup>Last Updated: 2022-11-01 (Tue @ 17:11)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
