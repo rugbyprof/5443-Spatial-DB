@@ -9,6 +9,6 @@
 | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P03">P03</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P03"> Project 3 </a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P03"> Missile Command (Part 1)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P03"> 09-29-2022 (Thursday @ 3:30 p.m.)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P03">2022-09-29 00:00:00</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04">P04</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04"> Project 3 </a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04"> Missile Command (Part 2)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04"> 09-29-2022 (Thursday @ 3:30 p.m.)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04">2022-09-29 00:00:00</a>~ | ---- |
 
-<sup>Last Updated: 2022-11-01 (Tue @ 17:11)</sup> 
+<sup>Last Updated: 2022-11-02 (Wed @ 14:19)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
