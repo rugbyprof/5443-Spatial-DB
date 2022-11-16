@@ -1,4 +1,4 @@
-## Project 3/4 - Missile Command (Pt1)
+## Project 3 - Missile Command (Pt1)
 #### Due: 12-06-2022 (Thursday @ 3:30 p.m.)
 
 <center>
