@@ -7,6 +7,6 @@
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/03_Readmees">03_Readmees</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/03_Readmees"> README </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/03_Readmees"> How You Should Format Them</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/03_Readmees"> None</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/03_Readmees">None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/04_ApiHelp">04_ApiHelp</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/04_ApiHelp"> Fast Api </a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/04_ApiHelp"> Backend for Country Game</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/04_ApiHelp"> Resources</a>*** | ***<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Resources/04_ApiHelp">None</a>*** |  |
 
-<sup>Last Updated: 2022-11-16 (Wed @ 02:45)</sup> 
+<sup>Last Updated: 2022-11-16 (Wed @ 02:46)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
