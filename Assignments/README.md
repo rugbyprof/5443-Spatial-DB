@@ -10,6 +10,6 @@
 | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P01">P01</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P01"> Project 1 </a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P01"> Project setup</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P01"> 09-13-2022 (Tuesday @ 3:30 p.m.)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P01">2022-09-13 00:00:00</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02">P02</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02"> Project 2 </a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02"> World Data</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02"> 09-20-2022 (Tuesday @ 3:30 p.m.)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02">2022-09-20 00:00:00</a>~ | ---- |
 
-<sup>Last Updated: 2022-11-16 (Wed @ 22:01)</sup> 
+<sup>Last Updated: 2022-11-16 (Wed @ 22:03)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

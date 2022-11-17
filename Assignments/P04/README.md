@@ -2,7 +2,7 @@
 #### Due: 11-22-2022 (Tuesday @ 3:30 p.m.)
 
 ## Steaming To Battle
-<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/fleet_travel.jpg" width="300">
+<img src="./images/fleet_travel.jpg" width="300">
 
 
 ### Problem Statement:
