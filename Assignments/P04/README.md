@@ -46,23 +46,23 @@ Here is the structure of the bounding box we will be using.
 
 Below is an example of the spacing / staggering for your ships. 
 
-<a href="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/ship_alignment_400x.png"><img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/ship_alignment_400x.png" width="300"></a>
+<a href="./images/ship_alignment_400x.png"><img src="./images/ship_alignment_400x.png" width="300"></a>
 
 ### Bearing
 
 Ships that generate near game borders need to be cognizant of their direction. I laugh when I look at that images as it is something the military would actually do :) Kid style image for a battle fleet ...
 
-<a href="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/ship_direction_1024x.png"><img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/ship_direction_1024x.png" width="250"></a>
+<a href="./images/ship_direction_1024x.png"><img src="./images/ship_direction_1024x.png" width="250"></a>
 
 ### Sectors
 
 Here are sectors listed out visually on a compass. Normally sectors would use a grid system, but what's the fun in giving you an even smaller bounding box to generate coordinates in. That's too easy.
 
-<a href="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/cardinal_grid_1024x.png"><img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/cardinal_grid_1024x.png" width="250"></a>
+<a href="./images/cardinal_grid_1024x.png"><img src="./images/cardinal_grid_1024x.png" width="250"></a>
 
 In this next example, the sector "NE" (North East) was specified for the fleet to materialize in. Notice the direction is away from one of the nearest game borders, and parallel with the other. 
 
-<a href="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/cardinal_grid_small_1024x.png"><img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/cardinal_grid_small_1024x.png" width="250"></a> |
+<a href="./images/cardinal_grid_small_1024x.png"><img src="./images/cardinal_grid_small_1024x.png" width="250"></a> |
 
 
 ### Cardinal Direction From Degrees
