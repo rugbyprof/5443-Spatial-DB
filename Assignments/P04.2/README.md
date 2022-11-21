@@ -1,6 +1,8 @@
 ## Project 4.1 - Battle Ship
 #### Due: 11-22-2022 (Tuesday @ 3:30 p.m.)
 
+# NOT COMPLETE
+
 ## Game Database
 <img src="./images/postgres.png" width="150">
 

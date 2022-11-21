@@ -1,3 +1,8 @@
+## Project 4.4 - Battle Ship
+#### Due: 11-22-2022 (Tuesday @ 3:30 p.m.)
+
+# NOT COMPLETE
+
 `𝑔`: the gravitational acceleration—usually taken to be 9.81m/s<sup>2</sup> near the Earth's surface
 
 `θ`: the angle at which the projectile is launched

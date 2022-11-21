@@ -1,6 +1,8 @@
 ## Project 4.3 - Battle Ship
 #### Due: 11-22-2022 (Tuesday @ 3:30 p.m.)
 
+# NOT COMPLETE
+
 ## Do Not Collide
 <img src="./images/collision.png" width="300">
 
