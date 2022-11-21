@@ -10,14 +10,15 @@
 - Given:
   - A bounding box: `bbox` with upper left and lower right coordinates.
   - A json list of ships like this one: [ships.json](ships.json).
-- Determine how many ships are in your fleet.
-- Then generate a `pseudo random` location for each ship within a given `bbox` and at a specified "sector" within that `bbox`.
+- Determine how many ships are in your fleet (by counting them im ships.json).
+- Then generate a `pseudo random` location for each ship within a given `bbox` and at a specified "sector" within that `bbox`. You can acheive this by generating a single point pseudo-randomly, then placing your ships accordingly starting with that point.
+
 
 
 ### Some Stipulations
 
 #### PostGres
-  - After initially reading in your ship data, and loading the values into a Postgres table, ALL calculatons mentioned in this assignment will be done via PostGis / PostGres.
+  - After initially reading in your ship data, and loading the values into a Postgres table, ALL calculations mentioned in this assignment will be done via PostGis / PostGres.
 
 #### Ship Location and Orientation
   - Each ship should be facing the same direction.
@@ -25,7 +26,7 @@
     - 111m from port to starboard
     - 222m from bow to stern
     - You can be +/- 5 meters 
-- Depending on where your ships materialize, be cognizant of each of your ships bearings. You don't want to immediatly start leaving the battle area (see image below)
+- Depending on where your ships materialize, be cognizant of each of your ships bearings. You don't want to immediately start leaving the battle area (see image below)
 - The "sector" will be chosen via a cardinal direction. 
 
 ## Examples
