@@ -1,5 +1,5 @@
-## Project 4.4 - Battle Ship
-#### Due: 11-22-2022 (Tuesday @ 3:30 p.m.)
+## Project 4.3 - BS: Hit Detection and Reply
+#### Due: 11-29-2022 (Tuesday @ 3:30 p.m.)
 
 # NOT COMPLETE
 

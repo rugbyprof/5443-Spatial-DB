@@ -1,7 +1,5 @@
-## Project 4.3 - Battle Ship
+## Project 4.3 - BS: Collision Avoidance
 #### Due: 11-29-2022 (Tuesday @ 3:30 p.m.)
-
-# NOT COMPLETE
 
 ## Do Not Collide
 <img src="./images/collision.png" width="300">
