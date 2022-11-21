@@ -1,4 +1,4 @@
-## Project 4.1 - Battle Ship
+## Project 4.2 - Battle Ship
 #### Due: 11-27-2022 (Sunday @ 6:00 p.m.)
 
 
