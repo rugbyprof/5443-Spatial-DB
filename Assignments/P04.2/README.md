@@ -21,6 +21,8 @@ The goal for creating the database, as you all know, is to allow us to run queri
 - Change the direction of your fleet.
 - Rotate the guns on one of your ships.
 - Fire a torpedo.
+- Was one of your ships hit by a projectile?
+- What damage did that projectile inflict?
 - **Possible Advanced Queries**
   - To keep track of the enemy, and find patterns, you may want to store enemy fleets locations as well so you can perform some kind of tracking or rudimentary prediction as to their next location. 
   
@@ -74,10 +76,13 @@ You can create your database as you see fit. However, everything that is possibl
 
 You can use anything I gave you, plus you may ask for my help at anytime. But it must be soon, we are in a hurry.
 
+## Important Note
+
+You also need to create a bounding box around each of your ships and store in in your database as a rectangle shaped geometry. 
+
 ## Deliverables
 
 - Create a folder called `P04.2` in your assignments folder.
 - Place a copy of your db schema in this folder. 
 - Separate files for separate table with their data, if data is short enough to fit on a page, other wise just the first N rows (enough for 1 page).
 - Example queries and their outputs, implemented based on the 5 examples in the discussion above, as executed on your created DB. This is a large part of this assignment.
-

@@ -1,13 +1,16 @@
-## Project 4.3 - BS: Collision Avoidance
+## Project 4.4 - BS: Hit Detection and Reply
 #### Due: 11-29-2022 (Tuesday @ 3:30 p.m.)
 
-## Do Not Collide
-<img src="./images/collision.png" width="300">
+# NOT COMPLETE
 
+`𝑔`: the gravitational acceleration—usually taken to be 9.81m/s<sup>2</sup> near the Earth's surface
 
-### Problem Statement:
+`θ`: the angle at which the projectile is launched
 
-- Given:
-  - A json list of ships like this one: [ships.json](ships.json).
-- Determine how many ships are in your fleet.
-- Then generate a `pseudo random` location for each ship within a given `bbox` and at a specified "sector" within that `bbox`.
+`𝑣`: the speed at which the projectile is launched
+
+`𝑦0`: the initial height of the projectile
+
+`𝑑`: the total horizontal distance traveled by the projectile
+
+The height `𝑦` of the projectile at distance `𝑥` is given by eq

@@ -49,6 +49,10 @@ Below is an example of the spacing / staggering for your ships.
 
 <a href="./images/ship_alignment_400x.png"><img src="./images/ship_alignment_400x.png" width="300"></a>
 
+Also the [decimal degrees](https://en.wikipedia.org/wiki/Decimal_degrees) information tells you helpful things like: a change in the 4th decimal place (0.0001) of either a lat lon not too far north or south give you a change of 11.1 meters. It also gives you a little insight to the precision as you go north or south away from the equator. 
+
+I would generate a single point, then use that as a base point for adding each ship around it with the appropriate spacing.
+
 ### Bearing
 
 Ships that generate near game borders need to be cognizant of their direction. I laugh when I look at that images as it is something the military would actually do :) Kid style image for a battle fleet ...
