@@ -9,8 +9,9 @@ The ship has a bearing straight north, and the guns are in line with the ship. E
 <a href="./images/ship_gun_orientation_0.png"> <img src="./images/ship_gun_orientation_0.png" height="300"></a>
 
 -----
+This ships bearing is also straight north, but the guns now are angled differently and not in line with the ship.
 
-<img src="./images/ship_gun_orientation_1.png" height="300">
+<a href="./images/ship_gun_orientation_1.png"> <img src="./images/ship_gun_orientation_1.png" height="300"></a>
 
 -----
 

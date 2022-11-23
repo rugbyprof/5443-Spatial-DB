@@ -13,6 +13,6 @@
 | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02">P02</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02"> Project 2 </a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02"> World Data</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02"> 09-20-2022 (Tuesday @ 3:30 p.m.)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P02">2022-09-20 00:00:00</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04.1">P04.1</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04.1"> Project 4.1 </a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04.1"> BS: Ship Location Generation</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04.1"> 11-22-2022 (Tuesday @ 3:30 p.m.)</a>~ | ~<a href="https://github.com/rugbyprof/5443-Spatial-DB/tree/master/Assignments/P04.1">2022-11-22 00:00:00</a>~ | ---- |
 
-<sup>Last Updated: 2022-11-23 (Wed @ 06:25)</sup> 
+<sup>Last Updated: 2022-11-23 (Wed @ 06:31)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
