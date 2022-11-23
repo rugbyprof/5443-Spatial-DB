@@ -1,16 +1,25 @@
-## Project 4.4 - BS: Hit Detection and Reply
+## Project 4.4 - BS: Firing Your Guns!
 #### Due: 11-29-2022 (Tuesday @ 3:30 p.m.)
 
-# NOT COMPLETE
 
-`𝑔`: the gravitational acceleration—usually taken to be 9.81m/s<sup>2</sup> near the Earth's surface
+### Example 1
 
-`θ`: the angle at which the projectile is launched
+The ship has a bearing straight north, and the guns are in line with the ship. Easy to determine which direction the guns are facing since the ship is straight north. 
 
-`𝑣`: the speed at which the projectile is launched
+<a href="./images/ship_gun_orientation_0.png"> <img src="./images/ship_gun_orientation_0.png" height="300"></a>
 
-`𝑦0`: the initial height of the projectile
+-----
 
-`𝑑`: the total horizontal distance traveled by the projectile
+<img src="./images/ship_gun_orientation_1.png" height="300">
 
-The height `𝑦` of the projectile at distance `𝑥` is given by eq
+-----
+
+<img src="./images/ship_gun_orientation_2.png" width="300">
+
+-----
+
+<img src="./images/ship_gun_orientation_3.png" width="300">
+
+-----
+
+<img src="./images/ship_gun_orientation_4.png" width="275">
