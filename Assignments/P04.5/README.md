@@ -1,5 +1,5 @@
-## Project 4.3 - BS: Collision Avoidance
-#### Due: 11-29-2022 (Tuesday @ 3:30 p.m.)
+## Project 4.5 - BS: Collision Avoidance
+#### Due: 12-01-2022 (Tuesday @ 3:30 p.m.)
 
 ## Do Not Collide
 <img src="./images/collision.png" width="300">
