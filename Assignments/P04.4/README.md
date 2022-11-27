@@ -1,6 +1,7 @@
 ## Project 4.4 - BS: Firing Your Guns!
 #### Due: 12-01-2022 (Tuesday @ 3:30 p.m.)
 
+# Will finish Sunday 27th
 
 ## Your guns bearing
 
