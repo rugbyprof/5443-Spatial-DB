@@ -1,5 +1,5 @@
 ## Project 4.1 - BS: Ship Location Generation
-#### Due: 11-22-2022 (Tuesday @ 3:30 p.m.)
+#### Due: 12-06-2022 (Tuesday @ 3:30 p.m.)
 
 ## Steaming To Battle
 <img src="./images/fleet_travel.jpg" width="300">

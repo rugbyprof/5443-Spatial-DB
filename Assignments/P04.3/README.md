@@ -1,5 +1,5 @@
 ## Project 4.3 - Comms and Menu
-#### Due: 12-01-2022 (Thursday @ 3:30 p.m.)
+#### Due: 12-06-2022 (Tuesday @ 3:30 p.m.)
 
 ## Overview
 
